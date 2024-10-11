@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dropdown Navigation</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    
+    .nav{
+        display: flex;
+        background-color: #333;
+        height: auto;
+
+    }
+    .nav .ul {
+  list-style-type: none; 
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  height: 10%;
+  width: 100vw;
+}
+
+ .nav .ul li {
+  display: inline-block;
+} 
+
+.nav .ul li a {
+  display: block;
+  padding: 20px;
+  margin-top: 10px;
+  color: white;
+  text-decoration: none;
+  
+}
+
+.nav .ul li:hover {
+  background-color: #333;
+}
+
+ .dropdown {
+  position: relative;
+} 
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  width: 100px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+   /* padding: 19px 16px;  */
+  display: block;
+  text-decoration: none;
+
+}
+a:hover{
+    /* background-color: #ada252; */
+    background-color: goldenrod;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  
+}
+.logo{
+  margin-right: 50%;
+  padding-left: 3%;
+}
+.cont{
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 100px;
+  z-index: 1;
+}
+.cont a{
+  color: white;
+   /* padding: 19px 16px;  */
+  display: block;
+  text-decoration: none;
+}
+.contact:hover .cont{
+  display: block;
+}
+.contact {
+  position: relative;
+  width: 100px;
+} 
+
+  </style>
+</head>
+<body>
+    <div class="nav">
+      <div class="logo">
+        <img  src="finallo.png" alt="logo" height="84" width="200"  >
+        </div>
+      <div class="ul">
+      <li><a href="home.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#">Events</a>
+        <div class="dropdown-content">
+          <a href="corporate.html"> Corporate  Event</a>
+          <a href="social.html"> Social Event</a>
+          <a href="eventservices.html"> Event Service</a>
+        </div>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li class="contact">
+        <a href="">Contact</a>
+          <div class="cont">
+          <a style="height: 20px; align-items: center;margin-top: 5px;"href=tel:9874582553> 9874582553</a>
+          </div>
+      </li>
+      
+    </div>
+    
+</body>
+</html>

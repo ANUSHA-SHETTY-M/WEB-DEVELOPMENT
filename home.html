@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Event Management</title>
+    <link rel="stylesheet" href="event.css">
+
+    <style>
+        @keyframes imageAnim{
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+
+        }
+        .anim{
+            transition: all 1s;
+            animation: imageAnim 3s infinite;
+        }
+    </style>
+    
+</head>
+    <body>
+    
+        <div class="topline">
+          
+        </div>
+            <div class="nav">
+                <div class="logo">
+                  <img  src="finallo.png" alt="logo" height="84" width="200"  >
+                </div>
+                <div class="ul">
+                    <li><a href="home.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="event.html">Events</a>
+                        <div class="dropdown-content">
+                            <a href="corporate.html"> Corporate  Event</a>
+                            <a href="social.html"> Social Event</a>
+                            <a href="eventservices.html"> Event Service</a>
+                          
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="venue.html">Venue</a>
+                        <div class="dropdown-content">
+                            <a href="cards.html">Cards</a>
+                        </div>
+                    </li>
+                    
+                    <li><a href="about.html">About</a></li>
+                    <li class="contact">
+                        <a href="">Contact</a>
+                        <div class="cont">
+                            <a style="height: 10px;   "href=tel:9874582553> 9874582553</a>
+                        </div>
+                    </li>
+                </div>
+                
+            </div>
+        <br><marquee behavior="action" direction="right" style="color:white  ;  background-color:#ccb9b5; font-size: 25px; padding-top: 8px; padding-bottom: 5px;margin-top: -13px;"> Elevating ordinary occasions to extraordinary celebrations. </marquee>
+<img class="slide" src="event1.jpg" class="anim" id="imgId" alt="" width="100vw" height="100vh">
+<style>
+    .slide{
+        height: 79vh;
+        width: 100vw;
+    }
+</style>
+<script>
+    var slide1=['event1.jpg','slide11.jpg','slide13.jpg','slide14.jpg',"slide15.jpg"];
+    var imageindex=0
+    var imgId=document.getElementById("imgId")
+    function nextslide() {
+        imageindex++
+        if(imageindex>=slide1.length){
+            imageindex=0
+        }
+        imgId.classList= "anim slide"
+
+        imgId.src=slide1[imageindex]
+        
+    }
+    setInterval(nextslide,2500);
+</script>
+        
+
+        <div class="content1">
+              
+            <div class="image"> 
+                <img  class="image2" src="photo1.png" alt="photo"   >
+            </div>
+            <div class="righttext">
+                <h2 style="padding: 25px; font-size: 30px; ">Turning Dreams into Unforgettable Moments: Magic Moments</h2>
+                <p style="word-spacing: 3px; font-size: 23px; padding: 15px; font-style: italic;" >Welcome to Magic Moments Event Management, where every moment is crafted to perfection. We specialize in curating experiences that transcend the ordinary, making your events extraordinary.
+                <br><br><br>At Magic Moments, we believe in adding a magical touch to every occasion. From meticulous planning to seamless execution, our team is dedicated to ensuring that your event is a reflection of your unique style and vision.</p>  
+            </div>
+         
+        
+    </div>
+        
+        <div class="content2">
+            <img  src="photo2.png" alt="event" height="455" width="1450"  >
+        </div>
+        <div class="content3">
+            <h2>Magic Memory Event Management</h2>
+        </div>
+        <div class="content4">
+                <div class="contenta">
+                    <a href="corporate.html"> <img class="content1a" src="cor.jpg" alt="event" height="320" width="300"  ></a>
+                  
+                </div>
+                <div class="contentb">
+               <img class="content1b"  src="soci.jpg" alt="event" height="320" width="300"  >
+                
+                </div>
+                <div class="contentc">
+                <img class="content1c" src="ser.jpg" alt="event" height="320" width="300"  >
+               
+            </div>
+        </div>
+        <div class="content5">
+            <center>
+                <h1><br>Make Appointment </h1> <br>
+                <script
+                src="https://code.jquery.com/jquery-3.4.1.js"
+                integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+                crossorigin="anonymous"></script>
+            <script>
+                function SubForm (){
+                    $.ajax({
+                        url:"https://api.apispreadsheets.com/data/IOec3ctCy7DIJf7D/",
+                        type:"post",
+                        data:$("#myForm").serializeArray(),
+                        success: function(){
+                            alert("Form Data Submitted :)")
+                        },
+                        error: function(){
+                            alert("There was an error :(")
+                        }
+                    });
+                }
+            </script>
+              	<form class="" id="myForm">
+                    
+                    <input name="name" placeholder="Name"  /><br><br>
+                    <br/>
+                    
+                    <input name="email" placeholder="Email" /><br><br>
+                    <br/>
+                   
+                    <input name="pno"  placeholder="Phone Number"/><br><br>
+                    <br/>
+                    
+                    <input name="sub"  placeholder="Subject"/><br><br>
+                    <br/>
+                    <textarea name="msg" id="" cols="40" rows="1" placeholder="Type Text Here" required></textarea><br>
+                  
+                </form>
+            <button onclick='SubForm()' > <br> Submit</button>
+            </center>
+           
+        </div>
+        <div class="footer">
+            <div class="footer1">
+                <h2 style="text-align: left ;"><b >Mailing Address</b></h2>
+                <p style="font-family: math; word-spacing: 3px; font-size: 20px; margin-top: 2%;">Rathnagiri Road Ramanahalli  Chikkamagaluru 577101</p>
+            </div>
+            <div class="footer2">
+                <h2 style="text-align: left;"><b>Email Address</b></h2>
+                <a style="height: 40px ; margin-top: 1%; font-size: 15px;padding-left: 30px; font-size: 20px;" href="mailto:magicmoments@gmail.com">  magicmoments.com</a>
+            </div>
+            <div class="footer3">
+                <h2 style="text-align: left;"><b>Phone Number</b></h2>
+                <a style=" align-items: center; margin-top: 15%; padding-left: 30px; "href=tel:9874582553> 9874582553</a>
+            </div>
+            <div class="footer4">
+                <h2 style="text-align: left;"><b style="padding-bottom: 35px;">Social Media</b></h2>
+                <li class="icon">
+                    <a href="https://www.instagram.com/accounts/login/?hl=en"><i class="fa fa-instagram" style="font-size:25px;color:white; padding-right: 7px;"  ></i></a>
+                    <a href="https://web.facebook.com/login/device-based/regular/login"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                </i>
+
+                  
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management</title>
+    <link rel="stylesheet" href="event.css">
+    <style>
+       .maincorp{
+        background-color:#ccb9b5;
+       
+    }
+    .corporate{
+        display:flex;
+        flex-wrap: wrap;
+
+    }
+    </style>
+    
+
+</head>
+    <body>
+        <div class="main">
+            <div class="topline"></div>
+                <div class="topbanner">
+                    <div class="list">
+                        <ul class="navbar">
+                            <div class="logo">
+                            <img  src="finallo.png" alt="logo" height="88" width="200"  >
+                            </div>
+                            <li class="btn"><a href="home.html"> Home</a></li>
+                            <li><button class="btn" id="myButton">events</button>
+                            <div id="box">
+                                <a href="corporate.html"> Corporate  Event</a>
+                                <a href="social.html"> Social Event</a>
+                                <a href="eventservices.html"> EventServ ice</a>
+                            </div> 
+                            </li>
+                            <a href="about.html"> About<br> Us</a>
+                        </ul>
+                    </div>
+                </div>
+
+        </div >
+        
+    </body>
+    <script>
+        var Button=document.getElementById("myButton")
+        var box1=document.getElementById("box")
+      function enter() {
+            box.style.display='block';
+        } 
+         function exit() {
+          box.style.display='none';
+         }
+            
+      Button.addEventListener("mouseenter",enter)
+      Button.addEventListener("mouseleave",exit)
+      box1.addEventListener("mouseenter",enter)
+      box1.addEventListener("mouseleave",exit)
+      box1.style.display='none'
+    </script>

@@ -1,0 +1,27 @@
+<button id="myButton">
+    Events
+</button>
+
+
+    <div id="box" >
+        <li class="btn"><a href="corporate.html"> Corporate event</a></li>
+        <li class="btn"><a href="social.html"> Social Event</a></li>
+        <li class="btn"><a href="eventservices.html">Event  Service</a></li>
+    </div>
+    <script>
+        var Button=document.getElementById("myButton")
+        var box1=document.getElementById("box")
+      function enter() {
+            box.style.display='block';
+        } 
+         function exit() {
+          box.style.display='none';
+         }
+            
+      Button.addEventListener("mouseenter",enter)
+      Button.addEventListener("mouseleave",exit)
+      box1.addEventListener("mouseenter",enter)
+      box1.addEventListener("mouseleave",exit)
+      box1.style.display='none'
+    </script>
+    
